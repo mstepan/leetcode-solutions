@@ -23,11 +23,11 @@ impl Solution {
             val /= 10;
         }
 
-        return Solution::is_vector_palindrome(&digits);
+        Solution::is_vector_palindrome(&digits)
     }
 
     fn is_vector_palindrome(vec: &Vec<u32>) -> bool {
-        if vec.len() == 0 {
+        if vec.is_empty() {
             return true;
         }
 
@@ -43,6 +43,6 @@ impl Solution {
             right -= 1;
         }
 
-        return true;
+        true
     }
 }

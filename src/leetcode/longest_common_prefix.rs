@@ -7,7 +7,7 @@ pub struct Solution {}
  */
 impl Solution {
     pub fn longest_common_prefix(strs: Vec<String>) -> String {
-        if strs.len() == 0 {
+        if strs.is_empty() {
             return String::from("");
         }
 
@@ -17,10 +17,10 @@ impl Solution {
             longest_prefix = Solution::find_longest_prefix(longest_prefix, val);
         }
 
-        return longest_prefix.to_string();
+        longest_prefix.to_string()
     }
 
-    fn find_shortest(strs: &Vec<String>) -> String {
+    fn find_shortest(strs: &[String]) -> String {
         let mut shortest_str = &strs[0];
 
         for val in strs.iter() {
@@ -29,7 +29,7 @@ impl Solution {
             }
         }
 
-        return shortest_str.clone();
+        shortest_str.clone()
     }
 
     fn find_longest_prefix(cur_prefix: String, val: &str) -> String {
@@ -48,6 +48,6 @@ impl Solution {
 
         let last_idx: usize = last_idx as usize;
 
-        return cur_prefix[0..last_idx + 1].to_string();
+        cur_prefix[0..last_idx + 1].to_string()
     }
 }

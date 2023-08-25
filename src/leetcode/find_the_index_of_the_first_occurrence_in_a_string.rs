@@ -39,7 +39,7 @@ impl Solution {
             }
         }
 
-        return -1;
+        -1
     }
 
     fn char_at(value: &str, index: usize) -> char {

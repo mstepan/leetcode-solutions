@@ -15,7 +15,7 @@ impl Solution {
             if ch == '[' || ch == '{' || ch == '(' {
                 stack_parenthesis.push(ch);
             } else if ch == ']' || ch == '}' || ch == ')' {
-                if stack_parenthesis.len() == 0 {
+                if stack_parenthesis.is_empty() {
                     return false;
                 }
                 let char_to_match = stack_parenthesis.pop().unwrap();
@@ -28,7 +28,7 @@ impl Solution {
             }
         }
 
-        return stack_parenthesis.len() == 0;
+        stack_parenthesis.is_empty()
     }
 
     fn is_matched(open_par: char, close_par: char) -> bool {
@@ -44,6 +44,6 @@ impl Solution {
             return true;
         }
 
-        return false;
+        false
     }
 }

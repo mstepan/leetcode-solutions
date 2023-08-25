@@ -18,6 +18,6 @@ impl Solution {
 
         nums.truncate(last + 1);
 
-        return nums.len() as i32;
+        nums.len() as i32
     }
 }

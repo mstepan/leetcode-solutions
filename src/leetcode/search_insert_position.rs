@@ -25,6 +25,6 @@ impl Solution {
             }
         }
 
-        return lo;
+        lo
     }
 }

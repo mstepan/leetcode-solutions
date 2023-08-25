@@ -19,6 +19,6 @@ impl Solution {
 
         nums.truncate(last);
 
-        return last as i32;
+        last as i32
     }
 }
