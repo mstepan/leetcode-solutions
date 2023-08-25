@@ -1,21 +1,32 @@
-use crate::leetcode::remove_duplicates_from_sorted_array::Solution;
+use crate::leetcode::search_insert_position::Solution;
 
 pub mod leetcode;
 
 fn main() {
-    let mut data = vec![1, 2, 2, 3, 4, 5, 5, 7, 7, 7];
+    let data: Vec<i32> = vec![1, 5, 8, 10, 25, 34, 40, 45];
+    let target = 1;
 
-    let unique_elems_count = Solution::remove_duplicates(&mut data);
+    let index = Solution::search_insert(data, target);
 
-    print_vector(&data);
-    println!("unique_elems_count = {unique_elems_count}");
+    println!("index = {index}");
 
     println!("main done...");
 }
 
 fn print_vector(data: &Vec<i32>) {
-    for val in data {
-        print!("{val}, ");
+    let mut data_str = String::with_capacity(data.len() * 4);
+
+    data_str.push_str("[");
+
+    for (i, val) in data.iter().enumerate() {
+        if i == 0 {
+            data_str.push_str(&format!("{}", val));
+        } else {
+            data_str.push_str(&format!(", {}", val));
+        }
     }
-    println!();
+
+    data_str.push_str("]");
+
+    println!("{data_str}");
 }
