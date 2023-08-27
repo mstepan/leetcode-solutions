@@ -9,6 +9,10 @@ pub struct Solution {}
  */
 
 impl Solution {
+    /**
+     * Dynamic programming solution with time O(N^4)
+     * N = 30, 30^4 = 810K
+     */
     pub fn is_scramble(s1: String, s2: String) -> bool {
         let mut cache: HashMap<(usize, usize, usize, usize), bool> = HashMap::new();
         Solution::has_solution(&s1, 0, s1.len() - 1, &s2, 0, s2.len() - 1, &mut cache)

@@ -3,6 +3,10 @@ use crate::leetcode::scramble_string::Solution;
 pub mod leetcode;
 
 fn main() {
+    let x = 30 * 30 * 30 * 30;
+
+    println!("x = {x}");
+
     let s1 = String::from("great");
     let s2 = String::from("rgeat");
 
