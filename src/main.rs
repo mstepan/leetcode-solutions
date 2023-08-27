@@ -1,16 +1,17 @@
-use crate::leetcode::merge_sorted_array::Solution;
+use crate::leetcode::scramble_string::Solution;
 
 pub mod leetcode;
 
 fn main() {
-    let mut nums1 = vec![1, 2, 3, 0, 0, 0];
-    let m = 3;
-    let mut nums2 = vec![2, 5, 6];
-    let n = 3;
+    let s1 = String::from("great");
+    let s2 = String::from("rgeat");
 
-    Solution::merge(&mut nums1, m, &mut nums2, n);
+    // let s1 = String::from("hi");
+    // let s2 = String::from("hi");
 
-    print_vector(&nums1);
+    let res = Solution::is_scramble(s1, s2);
+
+    println!("res = {res}");
 
     println!("main done...");
 }
