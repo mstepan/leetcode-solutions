@@ -1,21 +1,8 @@
-use crate::leetcode::scramble_string::Solution;
-
-pub mod leetcode;
+mod leetcode;
+use crate::leetcode::example::Solution;
 
 fn main() {
-    let x = 30 * 30 * 30 * 30;
-
-    println!("x = {x}");
-
-    let s1 = String::from("great");
-    let s2 = String::from("rgeat");
-
-    // let s1 = String::from("hi");
-    // let s2 = String::from("hi");
-
-    let res = Solution::is_scramble(s1, s2);
-
-    println!("res = {res}");
+    Solution::print_me(133);
 
     println!("main done...");
 }

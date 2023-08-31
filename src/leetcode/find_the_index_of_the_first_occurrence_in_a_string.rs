@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub struct Solution {}
 
 /**
@@ -6,6 +7,7 @@ pub struct Solution {}
 *
 * https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
 */
+#[allow(dead_code)]
 impl Solution {
     /**
      * N = haystack.len

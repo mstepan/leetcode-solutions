@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub struct Solution {}
 
 /**
@@ -5,6 +6,7 @@ pub struct Solution {}
  *
  * https://leetcode.com/problems/longest-common-prefix/
  */
+#[allow(dead_code)]
 impl Solution {
     pub fn longest_common_prefix(strs: Vec<String>) -> String {
         if strs.is_empty() {

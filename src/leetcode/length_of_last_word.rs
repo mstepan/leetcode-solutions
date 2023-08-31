@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub struct Solution {}
 
 /**
@@ -6,6 +7,7 @@ pub struct Solution {}
 *
 * https://leetcode.com/problems/length-of-last-word/
 */
+#[allow(dead_code)]
 impl Solution {
     pub fn length_of_last_word(s: String) -> i32 {
         let mut i: i32 = (s.len() - 1) as i32;

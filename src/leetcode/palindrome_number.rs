@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub struct Solution {}
 
 /**
@@ -5,6 +6,7 @@ pub struct Solution {}
  *
  * https://leetcode.com/problems/palindrome-number/
  */
+#[allow(dead_code)]
 impl Solution {
     pub fn is_palindrome(x: i32) -> bool {
         if x < 0 {

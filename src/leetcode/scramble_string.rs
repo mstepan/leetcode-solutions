@@ -1,5 +1,6 @@
 use std::collections::HashMap;
 
+#[allow(dead_code)]
 pub struct Solution {}
 
 /**
@@ -7,7 +8,7 @@ pub struct Solution {}
  *
  * https://leetcode.com/problems/scramble-string/
  */
-
+#[allow(dead_code)]
 impl Solution {
     /**
      * Dynamic programming solution with time O(N^4)
