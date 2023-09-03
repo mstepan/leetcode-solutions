@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub struct Solution {}
 
 /**
@@ -5,6 +6,7 @@ pub struct Solution {}
  *
  * https://leetcode.com/problems/<problem-url>
  */
+#[allow(dead_code)]
 impl Solution {
     pub fn print_me(x: i32) {
         println!("x = {x}");

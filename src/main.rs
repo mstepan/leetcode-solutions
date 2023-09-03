@@ -1,8 +1,13 @@
 mod leetcode;
-use crate::leetcode::example::Solution;
+use crate::leetcode::form_largest_integer_with_digits_that_add_up_to_target::Solution;
 
 fn main() {
-    Solution::print_me(133);
+    let cost = vec![4, 3, 2, 5, 6, 7, 2, 5, 5];
+    let target = 9;
+
+    let largest_str = Solution::largest_number(cost, target);
+
+    println!("largest_str = {largest_str}");
 
     println!("main done...");
 }
