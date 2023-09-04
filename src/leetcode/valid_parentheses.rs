@@ -1,6 +1,5 @@
 use core::panic;
 
-#[allow(dead_code)]
 pub struct Solution {}
 
 /**
@@ -8,7 +7,6 @@ pub struct Solution {}
 *
 * https://leetcode.com/problems/valid-parentheses/
 */
-#[allow(dead_code)]
 impl Solution {
     pub fn is_valid(s: &str) -> bool {
         let mut stack_parenthesis: Vec<char> = vec![];

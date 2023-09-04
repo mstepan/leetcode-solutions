@@ -1,6 +1,7 @@
+#![allow(dead_code)]
+
 use std::cmp::max;
 
-#[allow(dead_code)]
 pub struct Solution {}
 
 impl Solution {

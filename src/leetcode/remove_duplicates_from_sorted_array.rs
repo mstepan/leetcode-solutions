@@ -1,4 +1,3 @@
-#[allow(dead_code)]
 pub struct Solution {}
 
 /**
@@ -6,7 +5,6 @@ pub struct Solution {}
  *
  * https://leetcode.com/problems/remove-duplicates-from-sorted-array/
  */
-#[allow(dead_code)]
 impl Solution {
     pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
         let mut last: usize = 0;

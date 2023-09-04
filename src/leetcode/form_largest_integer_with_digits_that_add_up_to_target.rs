@@ -1,4 +1,3 @@
-#[allow(dead_code)]
 pub struct Solution {}
 
 /**
@@ -7,7 +6,6 @@ pub struct Solution {}
 *
 * https://leetcode.com/problems/form-largest-integer-with-digits-that-add-up-to-target/
 */
-#[allow(dead_code)]
 impl Solution {
     /**
      * Dynamic programmin top-wodn approach.

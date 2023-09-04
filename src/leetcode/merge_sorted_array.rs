@@ -1,4 +1,3 @@
-#[allow(dead_code)]
 pub struct Solution {}
 
 /**
@@ -7,7 +6,6 @@ pub struct Solution {}
 *
 * https://leetcode.com/problems/merge-sorted-array/
 */
-#[allow(dead_code)]
 impl Solution {
     pub fn merge(res: &mut [i32], m: i32, nums2: &mut [i32], n: i32) {
         let mut res_idx = n + m - 1;

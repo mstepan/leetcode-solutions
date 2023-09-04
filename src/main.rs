@@ -1,18 +1,13 @@
+#![allow(dead_code)]
 mod leetcode;
-use crate::leetcode::max_dot_product_of_two_subsequences::Solution;
+use crate::leetcode::example::Solution;
 
 fn main() {
-    let v1 = vec![-3, -8, 3, -10, 1, 3, 9];
-    let v2 = vec![9, 2, 3, 7, -9, 1, -8, 5, -1, -1];
-
-    let res = Solution::max_dot_product(v1, v2);
-
-    println!("res = {res}");
+    Solution::print_me(133);
 
     println!("main done...");
 }
 
-#[allow(dead_code)]
 fn print_vector(data: &Vec<i32>) {
     let mut data_str = String::with_capacity(data.len() * 4);
 
