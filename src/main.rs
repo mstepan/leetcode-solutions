@@ -1,9 +1,20 @@
 #![allow(dead_code)]
 mod leetcode;
-use crate::leetcode::example::Solution;
+use crate::leetcode::find_median_from_data_stream::MedianFinder;
 
 fn main() {
-    Solution::print_me(133);
+    let mut obj = MedianFinder::new();
+    obj.add_num(10);
+    println!("res = {}", obj.find_median());
+
+    obj.add_num(2);
+    println!("res = {}", obj.find_median());
+
+    obj.add_num(12);
+    println!("res = {}", obj.find_median());
+
+    obj.add_num(8);
+    println!("res = {}", obj.find_median());
 
     println!("main done...");
 }
