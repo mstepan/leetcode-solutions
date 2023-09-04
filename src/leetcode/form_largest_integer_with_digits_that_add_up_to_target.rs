@@ -18,8 +18,7 @@ impl Solution {
         let mut sol: Vec<Option<String>> = vec![None; (target + 1) as usize];
         sol[0] = Some("".to_string());
 
-        for i in 1..sol.len() {
-            let cur_target = i as usize;
+        for cur_target in 1..sol.len() {
             let mut max_cur: Option<String> = None;
 
             for (j, &cur_cost) in cost.iter().enumerate() {
@@ -38,7 +37,7 @@ impl Solution {
                 }
             }
 
-            sol[i as usize] = max_cur;
+            sol[cur_target] = max_cur;
         }
 
         match &sol[sol.len() - 1] {
