@@ -1,13 +1,13 @@
 mod leetcode;
-use crate::leetcode::form_largest_integer_with_digits_that_add_up_to_target::Solution;
+use crate::leetcode::max_dot_product_of_two_subsequences::Solution;
 
 fn main() {
-    let cost = vec![4, 3, 2, 5, 6, 7, 2, 5, 5];
-    let target = 9;
+    let v1 = vec![-3, -8, 3, -10, 1, 3, 9];
+    let v2 = vec![9, 2, 3, 7, -9, 1, -8, 5, -1, -1];
 
-    let largest_str = Solution::largest_number(cost, target);
+    let res = Solution::max_dot_product(v1, v2);
 
-    println!("largest_str = {largest_str}");
+    println!("res = {res}");
 
     println!("main done...");
 }
