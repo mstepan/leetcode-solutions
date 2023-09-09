@@ -1,3 +1,4 @@
+pub mod combination_sum_4;
 pub mod example;
 pub mod find_median_from_data_stream;
 pub mod find_the_index_of_the_first_occurrence_in_a_string;

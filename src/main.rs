@@ -1,20 +1,14 @@
 #![allow(dead_code)]
 mod leetcode;
-use crate::leetcode::find_median_from_data_stream::MedianFinder;
+use crate::leetcode::combination_sum_4::Solution;
 
 fn main() {
-    let mut obj = MedianFinder::new();
-    obj.add_num(10);
-    println!("res = {}", obj.find_median());
+    let nums = vec![1, 2, 3];
+    let target = 4;
 
-    obj.add_num(2);
-    println!("res = {}", obj.find_median());
+    let res = Solution::combination_sum4(nums, target);
 
-    obj.add_num(12);
-    println!("res = {}", obj.find_median());
-
-    obj.add_num(8);
-    println!("res = {}", obj.find_median());
+    println!("res = {res}");
 
     println!("main done...");
 }
