@@ -20,7 +20,7 @@ impl Solution {
                 }
                 let char_to_match = stack_parenthesis.pop().unwrap();
 
-                if !Solution::is_matched(char_to_match, ch) {
+                if !Self::is_matched(char_to_match, ch) {
                     return false;
                 }
             } else {

@@ -10,7 +10,7 @@ impl Solution {
     pub fn length_of_last_word(s: String) -> i32 {
         let mut i: i32 = (s.len() - 1) as i32;
 
-        while i >= 0 && Solution::char_at(&s, i) == ' ' {
+        while i >= 0 && Self::char_at(&s, i) == ' ' {
             i -= 1;
         }
 
@@ -20,7 +20,7 @@ impl Solution {
 
         let mut j = i - 1;
 
-        while j >= 0 && Solution::char_at(&s, j) != ' ' {
+        while j >= 0 && Self::char_at(&s, j) != ' ' {
             j -= 1;
         }
 

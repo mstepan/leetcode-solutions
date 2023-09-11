@@ -13,7 +13,7 @@ impl Solution {
      *
      */
     pub fn calculate_minimum_hp(dungeon: Vec<Vec<i32>>) -> i32 {
-        let negative_path_value = Solution::single_path_negative_sum(&dungeon);
+        let negative_path_value = Self::single_path_negative_sum(&dungeon);
 
         let mut lo = 1;
         let mut hi = i32::abs(negative_path_value) + 1;
@@ -23,7 +23,7 @@ impl Solution {
         while lo <= hi {
             let mid = lo + (hi - lo) / 2;
 
-            if Solution::has_solution(mid, &dungeon) {
+            if Self::has_solution(mid, &dungeon) {
                 min_hp_solution = mid;
                 hi = mid - 1;
             } else {

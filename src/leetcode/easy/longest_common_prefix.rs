@@ -11,10 +11,10 @@ impl Solution {
             return String::from("");
         }
 
-        let mut longest_prefix = Solution::find_shortest(&strs);
+        let mut longest_prefix = Self::find_shortest(&strs);
 
         for val in strs.iter() {
-            longest_prefix = Solution::find_longest_prefix(longest_prefix, val);
+            longest_prefix = Self::find_longest_prefix(longest_prefix, val);
         }
 
         longest_prefix.to_string()

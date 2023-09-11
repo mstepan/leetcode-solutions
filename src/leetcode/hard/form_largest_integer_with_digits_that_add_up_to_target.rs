@@ -28,7 +28,7 @@ impl Solution {
                     if let Some(partial_str) = &sol[cur_target - cur_cost] {
                         let cur_str = digit.to_string() + partial_str;
 
-                        if Solution::cmp_strings_as_numbers(&cur_str, &max_cur) > 0 {
+                        if Self::cmp_strings_as_numbers(&cur_str, &max_cur) > 0 {
                             max_cur = Some(cur_str);
                         }
                     }

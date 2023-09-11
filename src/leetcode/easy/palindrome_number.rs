@@ -23,7 +23,7 @@ impl Solution {
             val /= 10;
         }
 
-        Solution::is_vector_palindrome(&digits)
+        Self::is_vector_palindrome(&digits)
     }
 
     fn is_vector_palindrome(vec: &Vec<u32>) -> bool {

@@ -14,7 +14,7 @@ impl Solution {
      */
     pub fn is_scramble(s1: String, s2: String) -> bool {
         let mut cache: HashMap<(usize, usize, usize, usize), bool> = HashMap::new();
-        Solution::has_solution(&s1, 0, s1.len() - 1, &s2, 0, s2.len() - 1, &mut cache)
+        Self::has_solution(&s1, 0, s1.len() - 1, &s2, 0, s2.len() - 1, &mut cache)
     }
 
     fn has_solution(
@@ -35,7 +35,7 @@ impl Solution {
         let elems_count = j1 - i1 + 1;
 
         if elems_count == 1 {
-            let res = Solution::char_at(s1, i1) == Solution::char_at(s2, i2);
+            let res = Self::char_at(s1, i1) == Self::char_at(s2, i2);
             cache.insert((i1, j1, i2, j2), res);
             return res;
         }
@@ -52,21 +52,13 @@ impl Solution {
 
             // direct scrumbling
             res = res
-                || (Solution::has_solution(s1, i1, k, s2, i2, i2 + first_length - 1, cache)
-                    && Solution::has_solution(s1, k + 1, j1, s2, i2 + first_length, j2, cache));
+                || (Self::has_solution(s1, i1, k, s2, i2, i2 + first_length - 1, cache)
+                    && Self::has_solution(s1, k + 1, j1, s2, i2 + first_length, j2, cache));
 
             // reverse parts
             res = res
-                || (Solution::has_solution(s1, i1, k, s2, i2 + second_length, j2, cache)
-                    && Solution::has_solution(
-                        s1,
-                        k + 1,
-                        j1,
-                        s2,
-                        i2,
-                        i2 + second_length - 1,
-                        cache,
-                    ));
+                || (Self::has_solution(s1, i1, k, s2, i2 + second_length, j2, cache)
+                    && Self::has_solution(s1, k + 1, j1, s2, i2, i2 + second_length - 1, cache));
 
             if res {
                 break;

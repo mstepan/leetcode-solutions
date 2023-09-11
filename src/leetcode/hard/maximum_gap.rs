@@ -22,13 +22,13 @@ impl Solution {
         let mut max_digits_cnt = 0;
 
         for val in data.iter() {
-            max_digits_cnt = max(max_digits_cnt, Solution::count_decimal_digits(val));
+            max_digits_cnt = max(max_digits_cnt, Self::count_decimal_digits(val));
         }
 
         let mut res = data;
 
         for idx in 0..max_digits_cnt {
-            res = Solution::sort_by_digit_at_position(&res, idx)
+            res = Self::sort_by_digit_at_position(&res, idx)
         }
 
         let mut max_gap = 0;
@@ -57,16 +57,16 @@ impl Solution {
         let mut buckets = [0; 10];
 
         for val in data.iter() {
-            let cur_digit = Solution::extract_decimal_digit(val, idx);
+            let cur_digit = Self::extract_decimal_digit(val, idx);
             buckets[cur_digit as usize] += 1;
         }
 
-        Solution::prefix_sum(&mut buckets);
+        Self::prefix_sum(&mut buckets);
 
         let mut res = vec![0; data.len()];
 
         for &val in data.iter().rev() {
-            let digit = Solution::extract_decimal_digit(&val, idx) as usize;
+            let digit = Self::extract_decimal_digit(&val, idx) as usize;
             buckets[digit] -= 1;
             let pos = buckets[digit];
             res[pos as usize] = val;

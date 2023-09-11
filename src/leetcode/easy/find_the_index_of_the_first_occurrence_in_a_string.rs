@@ -27,7 +27,7 @@ impl Solution {
             let mut j = 0;
 
             while j < needle.len() {
-                if Solution::char_at(&needle, j) != Solution::char_at(&haystack, i + j) {
+                if Solution::char_at(&needle, j) != Self::char_at(&haystack, i + j) {
                     break;
                 }
 
