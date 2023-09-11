@@ -1,9 +1,16 @@
 #![allow(dead_code)]
 mod leetcode;
-use crate::leetcode::easy::example::Solution;
+use crate::leetcode::hard::dungeon_game::Solution;
 
 fn main() {
-    Solution::print_me(133);
+    //let dungeon = vec![vec![-2, -3, 3], vec![-5, -10, 1], vec![10, 30, -5]];
+
+    let dungeon = vec![vec![2], vec![1]];
+
+    let min_hp = Solution::calculate_minimum_hp(dungeon);
+
+    println!("min_hp = {min_hp}");
+
     println!("main done...");
 }
 
